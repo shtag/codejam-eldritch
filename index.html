@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="popup">После замешивания колоды, пожалуйста перезагрузите страницу, или нажмите сюда.</div>
+  <div class="ancients">
+    <img class='ancient' src="assets/Ancients/Azathoth.png" alt="ancient">
+    <img class='ancient' src="assets/Ancients/Cthulthu.png" alt="ancient">
+    <img class='ancient' src="assets/Ancients/IogSothoth.png" alt="ancient">
+    <img class='ancient' src="assets/Ancients/ShubNiggurath.png" alt="ancient">
+  </div>
+  <div class="chosenAncient">
+    <img class='chosen-ancient' src="" alt="">
+  </div>
+  <div class="difficulty">
+    <div class="diff">
+      
+      <div class="dif">Очень легко</div>
+      <div class="dif">Легко</div>
+      <div class="dif">Обычный</div>
+      <div class="dif">Сложно</div>
+      <div class="dif">Очень сложно</div>
+    </div>
+    <div class="shuffle">Замешать колоду</div>
+  </div>
+  <div class="mythic">
+    <div class="scheme">
+      <div class="phase">
+        <div class="span">Фаза 1</div>
+        <div class="green phase1"></div>
+        <div class="brown phase1"></div>
+        <div class="blue phase1"></div>
+      </div>
+      <div class="phase">
+        <div class="span">Фаза 2</div>
+        <div class="green phase2"></div>
+        <div class="brown phase2"></div>
+        <div class="blue phase2"></div>
+      </div>
+      <div class="phase">
+        <div class="span">Фаза 3</div>
+        <div class="green phase3"></div>
+        <div class="brown phase3"></div>
+        <div class="blue phase3"></div>
+      </div>
+    </div>
+    <div class="colode">
+      <img class="colodeBtn" src="" alt="">
+    </div>
+    <div class="current-card">
+      <img class="current-card-img" src="" alt="">
+    </div>
+  </div>
+  
+
+ 
+  <script type="module" src="data/mythicCards/blue/index.js"></script> 
+  <script type="module" src="data/mythicCards/green/index.js"></script> 
+  <script type="module" src="data/mythicCards/brown/index.js"></script> 
+  <script type="module" src="data/mythicCards/index.js"></script> 
+
+  <script type="module" src="ancients.js"></script> 
+  <script type="module" src="index.js"></script>
+  
+</body>
+</html>

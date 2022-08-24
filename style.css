@@ -1,0 +1,111 @@
+body{
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url(assets/home.png);
+}
+.ancients, .chosenAncient, .mythic{
+  display: flex;
+  flex-direction: column;
+}
+.ancients {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.ancient{
+  height: 24%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.active-ancient{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.chosenAncient{
+  justify-content: center;
+  width: 100%;
+  min-width: 10px;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.difficulty{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dif, .shuffle{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.shuffle:hover{
+  background-color: black;
+  transition: 0.5s;
+}
+.active{
+  background-color: black;
+}
+
+.mythic{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.current-card{
+  height: 200px;
+}
+.phase ,.phase ,.phase{
+  display: flex;
+  align-items: center;
+}
+.green, .brown, .blue{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+}
+.green{
+  background-color: green;
+}
+.brown{
+  background-color: rgb(155, 58, 58);
+}
+.blue{
+  background-color: rgb(53, 53, 223);
+}
+.span{
+  color: white;
+}
+.colodeBtn, .current-card-img{
+  height: 250px;
+  cursor: pointer;
+}
+.current-card{
+  margin-bottom: 80px;
+}
+.popup{
+  position: absolute;
+  color: white;
+  left: 30%;
+  background-color: blueviolet;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 40%;
+}
