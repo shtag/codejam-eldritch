@@ -13,7 +13,7 @@ const phase2 = document.querySelectorAll('.phase2')
 const phase3 = document.querySelectorAll('.phase3')
 
 
-let chosenDiffucalty = 2;
+let chosenDiffucalty = 1;
 let chosenAncient;
 let currentAncient = []
 let currentColode = {}
@@ -24,7 +24,7 @@ let sumBlues = 0;
 import {ancientsData} from "./ancients.js"
 import {card} from "./data/mythicCards/index.js"
 
-dif[2].classList.add('active')
+dif[1].classList.add('active')
 
 ancients.forEach((element, index) => {
   element.addEventListener('click', (e) => {
@@ -42,9 +42,6 @@ ancients.forEach((element, index) => {
   })
 });
 
-
-
-
 dif.forEach((element ,index) => {
   element.addEventListener('click', (e) => {
     dif.forEach(element => {
@@ -52,6 +49,21 @@ dif.forEach((element ,index) => {
     })
     chosenDiffucalty = index;
     e.target.classList.add('active');
+    let greenCards
+    let brownCards
+    let blueCards
+    if(index == 0){
+      greenCards = currentColode.greenCards.filter(element => element.difficulty !== "hard");
+      brownCards = currentColode.brownCards.filter(element => element.difficulty !== "hard");
+      blueCards = currentColode.blueCards.filter(element => element.difficulty !== "hard");
+    } else if(index == 2){
+      greenCards = currentColode.greenCards.filter(element => element.difficulty !== "easy");
+      brownCards = currentColode.brownCards.filter(element => element.difficulty !== "easy");
+      blueCards = currentColode.blueCards.filter(element => element.difficulty !== "easy");
+    } 
+    currentColode.greenCards = greenCards;
+    currentColode.brownCards = brownCards;
+    currentColode.blueCards = blueCards;
   })
 })
 
@@ -104,18 +116,13 @@ shuffleButton.addEventListener('click', () => {
       phase[id].push(bluesArr.pop());
     }
   })
-
   let phrase1 = phase[0];
   let phrase2 = phase[1];
   let phrase3 = phase[2];
   phrase1.sort(() => Math.random() - 0.5)
   phrase2.sort(() => Math.random() - 0.5)
   phrase3.sort(() => Math.random() - 0.5)
-  console.log(phrase1)
-  console.log(phrase2)
-  console.log(phrase3)
   colode = [...phrase1, ...phrase2, ...phrase3];
-  console.log(colode)
   colode.reverse()
   colodeBtn.src = 'assets/mythicCardBackground.png'
 })
@@ -144,6 +151,8 @@ colodeBtn.addEventListener('click', () => {
 popup.addEventListener('click', () => {
   location.reload()
 })
+
+console.log('4 карты древних +20\n3 сложности +15\nКарты замешиваются согласно правилам +40\nЕсть трекер состояния колоды +20\nИтого: 95 баллов')
 
 
 
